@@ -1,0 +1,50 @@
+//- FILE IN WHICH OTHERS EXTEND FROM!
+
+doctype html
+html(lang="ko")
+    head
+        title #{pageTitle} | #{siteName}
+        //- mixing variable with text
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+    body 
+        header
+            //- CONDITIONALS
+            //- if fakeUser.loggedIn
+            //-     small Hello #{fakeUser.username}
+            //- nav
+            //-     ul
+            //-         if fakeUser.loggedIn
+            //-             li 
+            //-                 a(href="/logout") Logout
+            //-         else
+            //-             li
+            //-                 a(href="/login") Login
+            h1=pageTitle
+            nav 
+                ul 
+                    li
+                        a(href="/") Home
+                    if loggedIn
+                        li
+                            a(href="/videos/upload") Upload Video
+                        li 
+                            a(href=`/user/${loggedInUser._id}`) My Profile
+                        li 
+                            a(href="/user/edit") Edit Profile
+                        li 
+                            a(href="/user/logout") Logout
+                        //- li
+                        //-     a(href="/my-profile") #{loggedInUser.name}'s Profile
+                    else
+                        li 
+                            a(href="/join") Join
+                        li
+                            a(href="/login") Login
+                    li
+                        a(href="/search") Search
+
+        main
+            block content
+
+    include partials/footer
+    script(src="/static/js/main.js")
