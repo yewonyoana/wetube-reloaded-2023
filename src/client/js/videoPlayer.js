@@ -14,6 +14,8 @@ const videoControls = document.getElementById("videoControls");
 
 let controlsTimeout = null;
 let controlsMovementTimeout = null;
+// let videoPlayStatus = false;
+// let setVideoPlayStatus = false;
 let volumeValue = 0.5;
 video.volume = volumeValue;
 
@@ -43,6 +45,7 @@ const handleVideoClickPlay = () => {
 	handlePlayClick();
 };
 
+//mute with btns
 const handleMuteClick = (e) => {
 	if (video.muted) {
 		video.muted = false;
@@ -66,12 +69,14 @@ const handleVolumeChange = (event) => {
 	volumeValue = value;
 	video.volume = value;
 
+	//when the volume is set to 0 -> unmute
 	if (volumeValue === 0) {
 		video.muted = true;
 		muteBtn.innerText = "Unmute";
 	}
 };
 
+//formatting timelines
 const formatTime = (seconds) =>
 	new Date(seconds * 1000).toISOString().substring(11, 19);
 //11부터 8자리 가져와야 하니까 11, 11+8
@@ -92,6 +97,7 @@ const handleTimelineChange = (event) => {
 	} = event;
 	video.currentTime = value;
 
+	//change timeline while playing
 	if (!setVideoPlayStatus) {
 		videoPlayStatus = video.paused ? false : true;
 		setVideoPlayStatus = true;
@@ -100,11 +106,13 @@ const handleTimelineChange = (event) => {
 	video.currentTime = value;
 };
 
+//change timeline while playing
 const handleTimelineSet = () => {
 	videoPlayStatus ? video.play() : video.pause();
 	setVideoPlayStatus = false;
 };
 
+//fullscreen
 const handleFullscreen = () => {
 	const fullscreen = document.fullscreenElement;
 	if (fullscreen) {
@@ -116,6 +124,7 @@ const handleFullscreen = () => {
 	}
 };
 
+//when using btn to enter and exit
 const handleFullScreenBtn = (event) => {
 	const fullScreen = document.fullscreenElement;
 	if (fullScreen) {
@@ -125,6 +134,7 @@ const handleFullScreenBtn = (event) => {
 	}
 };
 
+//hiding controls
 const hideControls = () => videoControls.classList.remove("showing");
 
 const handleMouseMove = () => {
