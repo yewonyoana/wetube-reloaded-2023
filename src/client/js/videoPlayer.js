@@ -14,8 +14,7 @@ const videoControls = document.getElementById("videoControls");
 
 let controlsTimeout = null;
 let controlsMovementTimeout = null;
-// let videoPlayStatus = false;
-// let setVideoPlayStatus = false;
+
 let volumeValue = 0.5;
 video.volume = volumeValue;
 
@@ -154,6 +153,11 @@ const handleMouseLeave = () => {
 	controlsTimeout = setTimeout(hideControls, 3000);
 };
 
+const handleEnded = () => {
+	const { id } = videoContainer.dataset;
+	fetch(`/api/videos/${id}/view`, { method: "POST" });
+};
+
 //play&pause with btn
 playBtn.addEventListener("click", handlePlayClick);
 //play&pause with spacebar
@@ -167,6 +171,10 @@ document.addEventListener("keyup", (event) => {
 	if (event.key === "m") {
 		handleMuteClick();
 	}
+
+	if (event.key === "f") {
+		handleFullscreen();
+	}
 });
 volumeRange.addEventListener("input", handleVolumeChange);
 video.addEventListener("loadeddata", handleLoadedMetadata);
@@ -177,3 +185,4 @@ timeline.addEventListener("input", handleTimelineChange);
 fullScreenBtn.addEventListener("click", handleFullscreen);
 //change "exit" to "enter" when esc used to exit fullscreen
 videoContainer.addEventListener("fullscreenchange", handleFullScreenBtn);
+video.addEventListener("ended", handleEnded);
