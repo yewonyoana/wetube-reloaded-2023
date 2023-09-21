@@ -18,6 +18,8 @@ app.use(logger);
 //req.body doesn't exist here!
 app.use(express.urlencoded({ extended: true }));
 // middleware translating form into javascript before the router
+app.use(express.json());
+//backend understands text is sent from frontend
 //req.body exists here!
 app.use(
 	session({
