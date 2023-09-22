@@ -1,6 +1,6 @@
 import { createFFmpeg, fetchFile } from "@ffmpeg/ffmpeg";
 
-const startBtn = document.getElementById("startBtn");
+const actionBtn = document.getElementById("actionBtn");
 const video = document.getElementById("preview");
 
 let stream;
@@ -29,8 +29,11 @@ const downloadFile = (fileUrl, fileName) => {
 const handleDownload = async () => {
 	//preventing user from downloading again
 	actionBtn.removeEventListener("click", handleDownload);
+
 	actionBtn.innerText = "Transcoding...";
+
 	actionBtn.disabled = true;
+
 	//transcode video from webm -> mp4
 	const ffmpeg = createFFmpeg({ log: true });
 	await ffmpeg.load();
@@ -80,10 +83,9 @@ const handleDownload = async () => {
 const handleStart = () => {
 	actionBtn.innerText = "Recording";
 	actionBtn.disabled = true;
-
 	actionBtn.removeEventListener("click", handleStart);
 	//recording
-	recorder = new MediaRecorder(stream);
+	recorder = new MediaRecorder(stream, { mimeType: "video/webm" });
 	//fired when the recording is stopped
 	recorder.ondataavailable = (event) => {
 		//object URL, only created and exists in the browser
@@ -106,7 +108,6 @@ const handleStart = () => {
 const init = async () => {
 	stream = await navigator.mediaDevices.getUserMedia({
 		audio: false,
-		video: true,
 		video: {
 			width: 1024,
 			height: 576,
