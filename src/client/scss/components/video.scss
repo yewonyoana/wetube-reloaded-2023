@@ -4,18 +4,23 @@
 		height: 140px;
 		border-radius: 7px;
 		width: 100%;
-		background-color: ivory;
+		&:hover {
+			border: 3px solid $d-yl;
+		}
 	}
 	.video-mixin__data {
 		padding: 0px 15px;
 		.video-mixin__title {
 			font-size: 18px;
+			font-weight: 600;
 			display: block;
 			margin-top: 10px;
+			color: $d-yl;
 		}
 		.video-mixin__meta {
 			margin-top: 5px;
 			font-size: 12px;
+			color: $gray;
 		}
 	}
 }

@@ -20,7 +20,7 @@
 @import "./screens/watch.scss";
 
 //FONT
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap");
 
 //DEFAULTS
 a {
@@ -29,7 +29,7 @@ a {
 }
 
 body {
-	font-family: "Roboto Mono", monospace, "Courier New", Courier, monospace;
+	font-family: "Montserrat", sans-serif;
 	font-size: 15px;
 	background-color: white;
 	color: black;

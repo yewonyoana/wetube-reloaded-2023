@@ -1,20 +1,20 @@
 header
     a(href="/").header__logo
-        i.fas.fa-smile
-        i.fas.fa-smile-wink
+        span Happy
+        i.fab.fa-youtube
     nav 
         ul 
             li
                 a(href="/search")
                     i.fas.fa-search
             if loggedIn
-                li
+                li.upload
                     a(href="/videos/upload") Upload Video
-                li 
+                li.edit 
                     a(href="/user/edit") Edit Profile
-                li 
+                li.logout 
                     a(href="/user/logout") Logout
-                li 
+                li.loggedIn__header
                     a(href=`/user/${loggedInUser._id}`)
                         if !loggedInUser.avatarUrl
                             span 😎

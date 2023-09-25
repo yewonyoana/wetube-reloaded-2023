@@ -8,8 +8,8 @@ block content
                 span#play.videoControls__playBtn
                     i.fas.fa-play
                 div.videoControls__time
-                    span#currentTime 00:00 
-                    span / 
+                    span#currentTime 00:00
+                    span  / 
                     span#totalTime 00:00                   
             input(type="range",step="1", value="0", min="0")#timeline.videoControls__timeline
             div.videoControls__volume
@@ -23,21 +23,22 @@ block content
         p.video__title=video.title
         small.video__owner Uploaded by 
             a(href=`/user/${video.owner._id}`)=video.owner.name
-        small.video__createdAt=new Date(video.createdAt).toLocaleDateString("ko-kr", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
+        small.video__createdAt=new Date(video.createdAt).toLocaleDateString("eng", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
+        br
         if String(video.owner._id) === String(loggedInUser._id)
-            a(href=`${video.id}/edit`) Edit Video <i class="fas fa-arrow-right"></i>
+            a.video__edit(href=`${video.id}/edit`) Edit Video <i class="fas fa-arrow-right"></i>
             br
-            a(href=`${video.id}/delete`) Delete Video <i class="fas fa-arrow-right"></i>
+            a.video__delete(href=`${video.id}/delete`) Delete Video <i class="fas fa-arrow-right"></i>
     if loggedIn
         div.video__comments
             form.video__comment-form#commentForm
-                textarea(cols="30", rows="10", placeholder="Write a nice commment...")
+                textarea(cols="30", rows="10", placeholder="Write Commment")
                 button Add Comment 
     div.video__comments
         ul 
             each comment in video.comments.reverse()
                 li.video__comment(data-id=comment._id)
-                    i.fas.fa-comment 
+                    i.fas.fa-heart
                     span #{comment.text}
                     if String(comment.owner) === String(loggedInUser._id)
                         span.delete__icon ❌

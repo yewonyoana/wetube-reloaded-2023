@@ -3,17 +3,18 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	text-transform: uppercase;
+	color: $yl;
 	.header__logo {
-		color: $yl;
-		font-size: 50px;
-		.fas.fa-smile-wink {
-			display: none;
-		}
-		&:hover .fas.fa-smile {
-			display: none;
-		}
-		&:hover .fas.fa-smile-wink {
-			display: inline;
+		font-size: 40px;
+		font-weight: 900;
+		display: flex;
+		align-items: center;
+		margin-left: 10px;
+		transition: transform 0.1s;
+		&:hover {
+			color: $d-yl;
+			transform: scale(1.1);
 		}
 	}
 	ul {
@@ -22,23 +23,32 @@ header {
 		align-items: center;
 		li {
 			margin-left: 30px;
-			font-size: 14px;
 			font-weight: 600;
-			text-transform: uppercase;
-		}
-		i {
-			font-size: 16px;
+			transition: transform 0.1s;
+			&:hover {
+				color: $d-yl;
+				transform: scale(1.2);
+			}
 		}
 	}
 	.header__btn {
 		background-color: white;
-		color: black;
+		color: $yl;
 		padding: 5px 10px;
 		border-radius: 5px;
+		&:hover {
+			color: $d-yl;
+		}
 	}
 	.header__avatar {
 		width: 50px;
 		height: 50px;
 		border-radius: 50%;
+		border: 3px solid $yl;
+		transition: transform 0.1s;
+		&:hover {
+			border-color: $d-yl;
+			transform: scale(1.1);
+		}
 	}
 }

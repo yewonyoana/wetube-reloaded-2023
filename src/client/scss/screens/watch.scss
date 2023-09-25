@@ -2,26 +2,37 @@
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
+	color: $gray;
 	.video__title {
+		color: $d-yl;
 		font-size: 25px;
-		font-weight: 500;
+		font-weight: 600;
 		margin-bottom: 10px;
 	}
 	.video__createdAt {
-		margin: 10px 0px;
+		margin: 15px 0px;
 	}
 	.video__owner {
+		margin-top: 5px;
 		a {
 			color: cornflowerblue;
 			text-decoration: underline;
 		}
 	}
 }
+
+.video__edit,
+.video__delete {
+	font-size: 13px;
+	&:hover {
+		color: $yl;
+	}
+}
+
 .video__comments {
 	display: flex;
 	flex-direction: column;
-	max-width: 500px;
-	width: 100%;
+	width: 90%;
 	margin: 0 auto;
 	margin-top: 20px;
 	.video__comment {
@@ -29,5 +40,9 @@
 		border-bottom: 1px solid $yl;
 		color: black;
 		margin-bottom: 10px;
+	}
+	i {
+		color: $d-yl;
+		margin-right: 5px;
 	}
 }
