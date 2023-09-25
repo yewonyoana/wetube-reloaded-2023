@@ -4,8 +4,17 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	.header__logo {
-		color: $red;
-		font-size: 38px;
+		color: $yl;
+		font-size: 50px;
+		.fas.fa-smile-wink {
+			display: none;
+		}
+		&:hover .fas.fa-smile {
+			display: none;
+		}
+		&:hover .fas.fa-smile-wink {
+			display: inline;
+		}
 	}
 	ul {
 		display: flex;
@@ -23,13 +32,13 @@ header {
 	}
 	.header__btn {
 		background-color: white;
-		color: $bg;
+		color: black;
 		padding: 5px 10px;
 		border-radius: 5px;
 	}
 	.header__avatar {
-		width: 40px;
-		height: 40px;
+		width: 50px;
+		height: 50px;
 		border-radius: 50%;
 	}
 }

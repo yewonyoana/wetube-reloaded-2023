@@ -25,9 +25,9 @@ block content
             a(href=`/user/${video.owner._id}`)=video.owner.name
         small.video__createdAt=new Date(video.createdAt).toLocaleDateString("ko-kr", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
         if String(video.owner._id) === String(loggedInUser._id)
-            a(href=`${video.id}/edit`) Edit Video &rarr;
+            a(href=`${video.id}/edit`) Edit Video <i class="fas fa-arrow-right"></i>
             br
-            a(href=`${video.id}/delete`) Delete Video &rarr;
+            a(href=`${video.id}/delete`) Delete Video <i class="fas fa-arrow-right"></i>
     if loggedIn
         div.video__comments
             form.video__comment-form#commentForm

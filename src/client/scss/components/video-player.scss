@@ -7,11 +7,12 @@
 	.videoControls {
 		opacity: 0;
 		transition: opacity 0.5s ease-in-out;
+		color: white;
 		&.showing {
 			opacity: 1;
 		}
 		align-items: center;
-		border-radius: 10px;
+		border-radius: 15px;
 		position: absolute;
 		bottom: 10px;
 		width: 95%;
@@ -22,7 +23,7 @@
 		grid-template-columns: 1fr 4fr 1fr auto;
 		gap: 10px;
 		justify-content: space-between;
-		background-color: #0f1117;
+		background-color: $yl;
 		padding: 10px;
 		left: 0;
 		box-sizing: border-box;
