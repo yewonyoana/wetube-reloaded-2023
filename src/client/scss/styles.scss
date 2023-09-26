@@ -31,9 +31,8 @@ a {
 body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 15px;
-	background-image: src(
-		"https://img.freepik.com/free-photo/abstract-pastel-holographic-textured-background_53876-103982.jpg?w=2000&t=st=1695749610~exp=1695750210~hmac=c00219f0d7f74f18fd29011767f74ddf60ab2392ddb08627bc2c8cf07b05be90"
-	);
+	// background: url("./images/00.jpg") center / contain;
+	background-color: white;
 	color: black;
 }
 
@@ -71,8 +70,4 @@ main {
 		background-color: $light;
 		color: white;
 	}
-}
-
-.empty__message {
-	color: $gray;
 }

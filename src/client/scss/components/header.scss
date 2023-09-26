@@ -3,7 +3,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	color: $light;
 	.header__logo {
 		font-size: 40px;
