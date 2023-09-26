@@ -31,7 +31,9 @@ a {
 body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 15px;
-	background-color: white;
+	background-image: src(
+		"https://img.freepik.com/free-photo/abstract-pastel-holographic-textured-background_53876-103982.jpg?w=2000&t=st=1695749610~exp=1695750210~hmac=c00219f0d7f74f18fd29011767f74ddf60ab2392ddb08627bc2c8cf07b05be90"
+	);
 	color: black;
 }
 
@@ -66,7 +68,11 @@ main {
 	animation: goAway 0.5s ease-in-out forwards;
 	animation-delay: 5s;
 	&.error {
-		background-color: $yl;
+		background-color: $light;
 		color: white;
 	}
+}
+
+.empty__message {
+	color: $gray;
 }

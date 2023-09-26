@@ -5,7 +5,7 @@
 		border-radius: 7px;
 		width: 100%;
 		&:hover {
-			border: 3px solid $d-yl;
+			border: 3px solid $dark;
 		}
 	}
 	.video-mixin__data {
@@ -15,7 +15,7 @@
 			font-weight: 600;
 			display: block;
 			margin-top: 10px;
-			color: $d-yl;
+			color: $dark;
 		}
 		.video-mixin__meta {
 			margin-top: 5px;

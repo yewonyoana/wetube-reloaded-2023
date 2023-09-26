@@ -4,7 +4,7 @@
 	flex-direction: column;
 	color: $gray;
 	.video__title {
-		color: $d-yl;
+		color: $dark;
 		font-size: 25px;
 		font-weight: 600;
 		margin-bottom: 10px;
@@ -25,7 +25,7 @@
 .video__delete {
 	font-size: 13px;
 	&:hover {
-		color: $yl;
+		color: $light;
 	}
 }
 
@@ -37,12 +37,12 @@
 	margin-top: 20px;
 	.video__comment {
 		padding: 10px;
-		border-bottom: 1px solid $yl;
+		border-bottom: 1px solid $light;
 		color: black;
 		margin-bottom: 10px;
 	}
 	i {
-		color: $d-yl;
+		color: $dark;
 		margin-right: 5px;
 	}
 }

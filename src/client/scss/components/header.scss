@@ -4,7 +4,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	text-transform: uppercase;
-	color: $yl;
+	color: $light;
 	.header__logo {
 		font-size: 40px;
 		font-weight: 900;
@@ -13,7 +13,7 @@ header {
 		margin-left: 10px;
 		transition: transform 0.1s;
 		&:hover {
-			color: $d-yl;
+			color: $mid;
 			transform: scale(1.1);
 		}
 	}
@@ -26,28 +26,28 @@ header {
 			font-weight: 600;
 			transition: transform 0.1s;
 			&:hover {
-				color: $d-yl;
+				color: $dark;
 				transform: scale(1.2);
 			}
 		}
 	}
 	.header__btn {
 		background-color: white;
-		color: $yl;
+		color: $light;
 		padding: 5px 10px;
 		border-radius: 5px;
 		&:hover {
-			color: $d-yl;
+			color: $dark;
 		}
 	}
 	.header__avatar {
 		width: 50px;
 		height: 50px;
 		border-radius: 50%;
-		border: 3px solid $yl;
+		border: 3px solid $light;
 		transition: transform 0.1s;
 		&:hover {
-			border-color: $d-yl;
+			border-color: $dark;
 			transform: scale(1.1);
 		}
 	}
