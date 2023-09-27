@@ -29,10 +29,14 @@ a {
 }
 
 body {
+	box-sizing: border-box;
 	font-family: "Montserrat", sans-serif;
 	font-size: 15px;
-	// background: url("./images/00.jpg") center / contain;
-	background-color: white;
+	background-image: url("./images/smileyface.png");
+	background-size: 25%;
+	background-repeat: no-repeat;
+	background-position: bottom -10px right -30px;
+	background-attachment: fixed;
 	color: black;
 }
 

@@ -16,6 +16,9 @@
 	}
 	button {
 		all: unset;
+		&:hover {
+			color: $dark;
+		}
 	}
 	button {
 		position: absolute;

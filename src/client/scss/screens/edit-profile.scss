@@ -8,7 +8,8 @@
 .edit-profile__password {
 	margin-top: 50px;
 	text-align: center;
-	a {
+	a:hover {
+		color: $d-gray;
 		text-decoration: underline;
 	}
 }

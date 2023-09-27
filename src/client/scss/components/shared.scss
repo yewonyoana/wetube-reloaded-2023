@@ -1,6 +1,7 @@
 .empty__message {
 	margin-bottom: 50px;
 	font-size: 18px;
+	text-align: center;
 }
 
 .video-grid {
@@ -12,7 +13,9 @@
 .auth-switch {
 	text-align: center;
 	margin-top: 40px;
-	a {
+	color: $gray;
+	&:hover {
+		color: $d-gray;
 		text-decoration: underline;
 	}
 }

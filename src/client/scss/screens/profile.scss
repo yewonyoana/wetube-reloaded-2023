@@ -6,10 +6,11 @@
 	align-items: center;
 	margin-bottom: 50px;
 	img {
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		object-fit: cover;
 	}
 	h3 {
-		font-size: 18px;
+		font-size: 20px;
+		color: $mid;
 	}
 }
