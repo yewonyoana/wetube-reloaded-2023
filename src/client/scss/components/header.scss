@@ -1,21 +1,31 @@
 header {
-	padding: 20px 25px;
+	padding: 30px 25px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	text-transform: uppercase;
-	color: $light;
+	text-transform: lowercase;
+	color: black;
 	.header__logo {
-		font-size: 50px;
-		font-weight: 900;
-		color: $mid;
-		text-shadow: 1px 1px 2px $dark;
+		font-size: 70px;
 		display: flex;
 		align-items: center;
 		margin-left: 10px;
 		transition: transform 0.1s;
+		.fab.fa-youtube {
+			margin-left: 60px;
+		}
+		span {
+			display: none;
+		}
 		&:hover {
 			transform: scale(1.1);
+			span {
+				display: inline;
+				color: $mid;
+			}
+			.fab.fa-youtube {
+				display: none;
+			}
 		}
 	}
 	ul {
@@ -24,17 +34,18 @@ header {
 		align-items: center;
 		li {
 			margin-left: 30px;
-			font-weight: 600;
+			font-weight: 300;
 			transition: transform 0.1s;
 			&:hover {
-				color: $dark;
+				font-weight: 600;
+				color: $mid;
 				transform: scale(1.2);
 			}
 		}
 	}
 	.header__btn {
 		background-color: white;
-		color: $light;
+		color: black;
 		padding: 5px 10px;
 		border-radius: 5px;
 		&:hover {
@@ -45,10 +56,10 @@ header {
 		width: 50px;
 		height: 50px;
 		border-radius: 50%;
-		border: 3px solid $light;
+		border: 1px solid $dark;
 		transition: transform 0.1s;
 		&:hover {
-			border-color: $dark;
+			border: 3px solid $mid;
 			transform: scale(1.1);
 		}
 	}

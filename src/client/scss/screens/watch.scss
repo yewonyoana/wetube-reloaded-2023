@@ -23,7 +23,7 @@
 				font-size: 13px;
 			}
 			&:hover {
-				color: $light;
+				color: $dark;
 			}
 		}
 	}
@@ -58,12 +58,12 @@
 	}
 	.video__comment {
 		padding: 15px;
-		border-bottom: 0.5px solid $light;
-		color: rgb(107, 107, 107);
+		border-bottom: 0.5px solid $dark;
+		color: black;
 		margin-bottom: 10px;
 		display: flex;
 		align-items: center;
-		span:first-child {
+		.comment__icon {
 			padding-right: 5px;
 		}
 		.delete__icon {
@@ -73,7 +73,6 @@
 			font-size: 8px;
 		}
 		&:hover {
-			color: black;
 			.delete__icon {
 				display: inline;
 			}

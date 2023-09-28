@@ -20,7 +20,7 @@
 @import "./screens/watch.scss";
 
 //FONT
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;500;700;900&display=swap");
 
 //DEFAULTS
 a {
@@ -30,7 +30,7 @@ a {
 
 body {
 	box-sizing: border-box;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Gothic A1", sans-serif;
 	font-size: 15px;
 	background-image: url("./images/smileyface.png");
 	background-size: 25%;
@@ -68,10 +68,10 @@ main {
 	padding: 10px 20px;
 	border-radius: 10000px;
 	text-align: center;
-	animation: goAway 0.5s ease-in-out forwards;
+	animation: goAway 0.3s ease-in-out forwards;
 	animation-delay: 5s;
 	&.error {
-		background-color: $light;
+		background-color: $dark;
 		color: white;
 	}
 }

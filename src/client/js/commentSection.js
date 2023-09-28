@@ -13,10 +13,11 @@ const addComment = (text, id) => {
 	const deleteIcon = document.createElement("span");
 
 	newComment.className = "video__comment";
-	icon.className = "fas fa-comment";
+	icon.className = "comment__icon";
 	deleteIcon.className = "delete__icon";
 
 	newComment.appendChild(icon);
+	icon.innerText = "💛";
 
 	span.innerText = ` ${text}`;
 	deleteIcon.innerText = "❌";

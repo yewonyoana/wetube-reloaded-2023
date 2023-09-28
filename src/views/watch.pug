@@ -41,7 +41,7 @@ block content
         ul
             each comment in video.comments.reverse()
                 li.video__comment(data-id=comment._id)
-                    span 💛
+                    span.comment__icon 💛
                     span #{comment.text}
                     if String(comment.owner) === String(loggedInUser._id)
                         span.delete__icon ❌
