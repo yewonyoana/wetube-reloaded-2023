@@ -2,7 +2,8 @@ extends base
 
 block content
     if errorMessage
-        span=errorMessage
+            div.error__message
+                span=errorMessage
     form(method="POST")
         input(name="name", type="text", placeholder="Name", required)
         input(name="email", type="email", placeholder="E-mail", required)

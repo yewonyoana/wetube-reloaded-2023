@@ -69,7 +69,8 @@ main {
 	border-radius: 10000px;
 	text-align: center;
 	animation: goAway 0.3s ease-in-out forwards;
-	animation-delay: 5s;
+	animation-delay: 3s;
+	color: $mid;
 	&.error {
 		background-color: $dark;
 		color: white;

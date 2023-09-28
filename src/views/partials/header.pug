@@ -16,7 +16,7 @@ header
                     a(href="/user/logout") Logout
                 li.loggedIn__header
                     a(href=`/user/${loggedInUser._id}`)
-                        if loggedInUser.avatarUrl === ""
+                        if !loggedInUser.avatarUrl
                             span 😎
                         else
                             if loggedInUser.avatarUrl
