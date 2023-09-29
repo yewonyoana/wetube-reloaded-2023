@@ -94,7 +94,7 @@ export const postUpload = async (req, res) => {
 			description: description,
 			hashtags: Video.formatHashtags(hashtags),
 			fileUrl: isCloudtype ? video[0].location : video[0].path,
-			thumbUrl: isCloudtype ? thumb[0].location : video[0].path,
+			thumbUrl: isCloudtype ? thumb[0].location : thumb[0].path,
 			owner: _id,
 		});
 
