@@ -175,6 +175,7 @@ document.addEventListener("keyup", (event) => {
 	}
 });
 volumeRange.addEventListener("input", handleVolumeChange);
+// video.addEventListener("loadeddata", handleLoadedMetadata);
 video.addEventListener("canplay", handleLoadedMetadata);
 handleLoadedMetadata();
 video.addEventListener("timeupdate", handleTimeUpdate);
