@@ -354,8 +354,8 @@ export const finishGithubLogin = async (req, res) => {
 };
 
 export const logout = (req, res) => {
-	req.session.destroy();
 	req.flash("info", "Bye Bye");
+	req.session.destroy();
 	return res.redirect("/");
 };
 
@@ -417,7 +417,7 @@ export const postChangePassword = async (req, res) => {
 	user.password = newPassword;
 	await user.save();
 	req.flash("info", "Password updated");
-	return res.redirect("/users/logout");
+	return res.redirect("/user/logout");
 };
 
 export const see = async (req, res) => {
