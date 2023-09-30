@@ -83,8 +83,6 @@ export const postUpload = async (req, res) => {
 
 	const { title, description, hashtags } = req.body;
 
-	const isCloudtype = process.env.NODE_ENV === "production";
-
 	try {
 		const newVideo = await Video.create({
 			title,
