@@ -80,8 +80,10 @@ const formatTime = (seconds) =>
 //11부터 8자리 가져와야 하니까 11, 11+8
 
 const handleLoadedMetadata = () => {
-	totalTime.innerText = formatTime(Math.floor(video.duration));
-	timeline.max = Math.floor(video.duration);
+	if (!isNaN(video.duration)) {
+		totalTime.innerText = formatTime(Math.floor(video.duration));
+		timeline.max = Math.floor(video.duration);
+	}
 };
 
 const handleTimeUpdate = () => {
