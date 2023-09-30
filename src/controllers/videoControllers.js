@@ -94,7 +94,7 @@ export const postUpload = async (req, res) => {
 			description: description,
 			hashtags: Video.formatHashtags(hashtags),
 			fileUrl: isCloudtype ? video[0].location : video[0].path,
-			thumbUrl: isCloudtype ? thumb[0].location : thumb[0].path,
+			thumbUrl: isCloudtype ? thumb[0].location : video[0].path,
 			owner: _id,
 		});
 
@@ -144,10 +144,6 @@ export const search = async (req, res) => {
 				$regex: new RegExp(keyword, "i"),
 			},
 		}).populate("owner");
-		console.log(
-			" videoController에있는 search 컨트롤러 videos 참조 : ",
-			videos
-		);
 	}
 	return res.render("search", { pageTitle: "Search", videos });
 };
