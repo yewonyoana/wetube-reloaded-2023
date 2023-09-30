@@ -70,6 +70,7 @@ const handleVolumeChange = (event) => {
 	//when the volume is set to 0 -> unmute
 	if (volumeValue === 0) {
 		video.muted = true;
+		muteBtnIcon.classList = "fas fa-volume-up";
 	}
 };
 
@@ -175,9 +176,9 @@ document.addEventListener("keyup", (event) => {
 	}
 });
 volumeRange.addEventListener("input", handleVolumeChange);
-// video.addEventListener("loadeddata", handleLoadedMetadata);
-video.addEventListener("canplay", handleLoadedMetadata);
-handleLoadedMetadata();
+video.addEventListener("loadedmetadata", handleLoadedMetadata);
+// video.addEventListener("canplay", handleLoadedMetadata);
+// handleLoadedMetadata();
 video.addEventListener("timeupdate", handleTimeUpdate);
 videoContainer.addEventListener("mousemove", handleMouseMove);
 videoContainer.addEventListener("mouseleave", handleMouseLeave);
