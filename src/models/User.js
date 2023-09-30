@@ -7,7 +7,7 @@ const userSchema = mongoose.Schema({
 	socialOnly: { type: Boolean, default: false },
 	username: { type: String, required: true, unique: true },
 	password: { type: String },
-	name: { type: String },
+	name: { type: String, required: false },
 	location: String,
 	avatarUrl: String,
 	videos: [{ type: mongoose.Schema.Types.ObjectId, ref: "Video" }],
