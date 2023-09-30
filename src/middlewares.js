@@ -11,15 +11,9 @@ const s3 = new aws.S3({
 
 const isCloudtype = process.env.NODE_ENV === "production";
 
-const s3ImageUploader = multerS3({
+const multerUploader = multerS3({
 	s3: s3,
-	bucket: "wetube-reloaded-2023/images",
-	acl: "public-read",
-});
-
-const s3VideoUploader = multerS3({
-	s3: s3,
-	bucket: "wetube-reloaded-2023/videos",
+	bucket: "wetube-reloaded-2023",
 	acl: "public-read",
 });
 
@@ -52,10 +46,10 @@ export const publicOnlyMiddleware = (req, res, next) => {
 export const avatarUpload = multer({
 	dest: "uploads/avatars",
 	limits: { fileSize: 3000000 },
-	storage: isCloudtype ? s3ImageUploader : undefined,
+	storage: multerUploader,
 });
 export const videoUpload = multer({
 	dest: "uploads/videos",
 	limits: { fileSize: 10000000 },
-	storage: isCloudtype ? s3VideoUploader : undefined,
+	storage: multerUploader,
 });

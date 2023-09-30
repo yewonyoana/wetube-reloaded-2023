@@ -10,17 +10,15 @@ header {
 		display: flex;
 		align-items: center;
 		margin-left: 10px;
-		.fab.fa-youtube {
-			margin-left: 60px;
-		}
-		span {
+		.header__image {
 			display: none;
 		}
 		&:hover {
-			span {
+			.header__image {
 				display: inline;
 				color: $mid;
 			}
+			.header__title,
 			.fab.fa-youtube {
 				display: none;
 			}
